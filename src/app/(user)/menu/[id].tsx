@@ -7,7 +7,7 @@ import { useState } from "react";
 import Button from "@/components/Button";
 import { useCart } from "@/providers/CartProvider";
 import { PizzaSize } from "@/types";
-import { useRouter } from "expo-router"; 
+import { useRouter } from "expo-router";   
 
 const ProductDetailsScreen = () => {
 
