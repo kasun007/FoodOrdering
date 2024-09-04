@@ -25,7 +25,7 @@ const OrderDetailScreen = () => {
         renderItem={({ item }) => <OrderItemListItem item={item} />}
         contentContainerStyle={{ gap: 10 }}
       />
-    </View>
+    </View> 
   );
 };
 
