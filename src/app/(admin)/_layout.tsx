@@ -23,14 +23,13 @@ const colorScheme = useColorScheme();
       screenOptions={{
       tabBarActiveTintColor: Colors.light.background,
       tabBarInactiveTintColor: 'gainsboro',
-        // Disable the static render of the header on web
-        // to prevent a hydration error in React Navigation v6.
-
-        tabBarStyle: {backgroundColor: Colors.light.tint}, 
-        headerShown: useClientOnlyValue(false, true),
+      // Disable the static render of the header on web
+      // To prevent a hydration error in React Navigation v6.
+      tabBarStyle: {backgroundColor: Colors.light.tint}, 
+      headerShown: useClientOnlyValue(false, true),
       }}>
 
-        <Tabs.Screen name='index' options={{href:null}}/>
+      <Tabs.Screen name='index' options={{href:null}}/>
       <Tabs.Screen
         name="menu"
         options={{

@@ -12,11 +12,11 @@ function TabBarIcon(props: {
   name: React.ComponentProps<typeof FontAwesome>['name'];
   color: string;
 }) {
-  return <FontAwesome size={26 } style={{ marginBottom: -3 }} {...props} />;
+  return <FontAwesome size={26} style={{ marginBottom: -3 }} {...props} />;
 }
 
 export default function TabLayout() {
-const colorScheme = useColorScheme();
+  const colorScheme = useColorScheme();
 
   return (
     <Tabs
@@ -27,20 +27,21 @@ const colorScheme = useColorScheme();
         headerShown: useClientOnlyValue(false, true),
       }}>
 
-        <Tabs.Screen name='index' options={{href:null}}/>
+      <Tabs.Screen name='index' options={{ href: null }} />
       <Tabs.Screen
         name="menu"
         options={{
           title: 'Menu',
           headerShown: false,
           tabBarIcon: ({ color }) => <TabBarIcon name="cutlery" color={color} />,
-           
+
         }}
       />
       <Tabs.Screen
-        name="two"
+        name="orders"
         options={{
           title: 'Orders',
+          headerShown: false, 
           tabBarIcon: ({ color }) => <TabBarIcon name="list" color={color} />,
         }}
       />

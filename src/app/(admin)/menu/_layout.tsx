@@ -4,14 +4,12 @@ import { Link, Stack } from "expo-router";
 import { Pressable } from "react-native";
 import Colors from '@/constants/Colors';
 
-export default function MenuStack() {
+export default function MenuSdtack() {
   return (
-    <Stack
-      screenOptions={{}}
-    >
+    <Stack screenOptions={{}}>
       <Stack.Screen name="index" options={{
         title: 'Menu', headerRight: () => (
-          <Link href="/cart" asChild>
+          <Link href="/(admin)/menu/create" asChild>
             <Pressable>
               {({ pressed }) => (
                 <FontAwesome
@@ -25,7 +23,10 @@ export default function MenuStack() {
           </Link>
         ),
       }} />
-    </Stack>
+
+ </Stack>
+
+
 
   );
 }
