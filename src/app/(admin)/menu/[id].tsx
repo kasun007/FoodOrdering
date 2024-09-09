@@ -10,11 +10,14 @@ import { PizzaSize } from "@/types";
 import { useRouter } from "expo-router";
 import { FontAwesome } from "@expo/vector-icons";
 import Colors from "@/constants/Colors";
+import { useProduct } from "@/api";
 
 const ProductDetailsScreen = () => {
 
-  const { id } = useLocalSearchParams();
-  const product = products.find((p) => p.id.toString() === id);
+  const { id :idString} = useLocalSearchParams();
+  const id = parseFloat(typeof idString === 'string' ? idString : '');
+
+  const { data: product, error, isLoading } = useProduct(id);
   const [selectedSize, setSelectedSize] = useState<PizzaSize>('M');
   const sizes: PizzaSize[] = ['S', 'M', 'L', 'XL'];
   const router = useRouter();
