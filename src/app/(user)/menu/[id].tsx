@@ -8,7 +8,7 @@ import Button from "@/components/Button";
 import { useCart } from "@/providers/CartProvider";
 import { PizzaSize } from "@/types";
 import { useRouter } from "expo-router";   
-import { useProduct } from "@/api";
+import { useProduct } from "@/api/products";
 
 const ProductDetailsScreen = () => {
 

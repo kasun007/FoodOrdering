@@ -10,7 +10,7 @@ import { PizzaSize } from "@/types";
 import { useRouter } from "expo-router";
 import { FontAwesome } from "@expo/vector-icons";
 import Colors from "@/constants/Colors";
-import { useProduct } from "@/api";
+import { useProduct } from "@/api/products";
 
 const ProductDetailsScreen = () => {
 

@@ -15,12 +15,12 @@ export type Enums<T extends keyof Database['public']['Enums']> =
 
   
 
-  /*export type Product = {
+  export type Product = {
    id: number;
    image: string | null;
    name: string;
    price: number;
-  };*/
+  };
 
 export type PizzaSize = 'S' | 'M' | 'L' | 'XL';
 

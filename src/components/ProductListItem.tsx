@@ -4,7 +4,8 @@ import Colors from '../constants/Colors';
 import { Link, useSegments } from 'expo-router';
 import { Product } from '@/app/types';
 import { Tables } from '@/database.types';
-
+import RemoteImage from './RemoteImage';
+ 
 
 
 export const defaultPizzaImage =
@@ -21,7 +22,13 @@ const ProductListItem = ({ product }: ProductListItemProps) => {
   return (
     <Link href={productRoute} asChild>
       <Pressable style={styles.container}>
-        <Image source={{ uri: product.image || defaultPizzaImage }} style={styles.image} />
+      <RemoteImage
+          path={product.image}
+          fallback={defaultPizzaImage}
+          style={styles.image}
+          resizeMode="contain"
+        />
+         
         <Text style={styles.title} numberOfLines={3}>{product.name} </Text>
         <Text style={styles.price}>from ${product.price}</Text>
 
